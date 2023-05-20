@@ -1,0 +1,33 @@
+var previousPosition = window.pageYOffset;
+window.onscroll = function() {
+    var currentPosition = window.pageYOffset;
+    if (previousPosition > currentPosition) {
+
+        document.getElementById('nav-bar').classList.remove('hide-nav');
+    } else {
+
+        document.getElementById('nav-bar').classList.add('hide-nav');
+        // document.getElementById('nav-bar').style.background = '#000';
+    }
+    previousPosition = currentPosition;
+}
+
+let menu = document.getElementById('menu-div');
+let menuBars = document.getElementById('menu-bars');
+let screenOpacity = document.getElementById('screen-opacity');
+let closeMenuIcon = document.getElementById("close-menu-icon")
+
+menuBars.addEventListener('click', function() {
+    menu.classList.remove('hidden');
+    screenOpacity.classList.remove('hidden');
+})
+
+closeMenuIcon.addEventListener('click', function() {
+    menu.classList.add('hidden');
+    screenOpacity.classList.add('hidden')
+})
+
+screenOpacity.onclick = function() {
+    menu.classList.add('hidden');
+    screenOpacity.classList.add('hidden')
+}
