@@ -55,7 +55,7 @@ export default {
     methods: {
         async getIngredientes() {
 
-            const req = await fetch('http://localhost:3000/ingredientes');
+            const req = await fetch('.../db/db.json.ingredientes');
             const data = await req.json();
 
             this.paes = data.paes;
