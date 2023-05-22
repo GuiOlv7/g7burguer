@@ -55,7 +55,7 @@ export default {
     methods: {
         async getIngredientes() {
 
-            const req = await fetch('165.227.11.29/ingredientes');
+            const req = await fetch('http://192.168.1.117:8080/ingredientes');
             const data = await req.json();
 
             this.paes = data.paes;
@@ -75,7 +75,7 @@ export default {
             }
             const dataJson = JSON.stringify(data)
 
-            const req = await fetch('165.227.11.29/burgers', {
+            const req = await fetch('http://192.168.1.117:8080/burgers', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: dataJson
