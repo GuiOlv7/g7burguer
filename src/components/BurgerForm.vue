@@ -55,7 +55,7 @@ export default {
     methods: {
         async getIngredientes() {
 
-            const req = await fetch('https://g7burger.netlify.app/ingredientes');
+            const req = await fetch('165.227.11.29/ingredientes');
             const data = await req.json();
 
             this.paes = data.paes;
@@ -75,7 +75,7 @@ export default {
             }
             const dataJson = JSON.stringify(data)
 
-            const req = await fetch('https://g7burger.netlify.app/burgers', {
+            const req = await fetch('165.227.11.29/burgers', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: dataJson
